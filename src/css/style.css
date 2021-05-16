@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  color: #212121;
+}
+
+header {
+  padding: 15px 10px;
+  text-align: center;
+  background: #f9ed69;
+  font-family: "Sofia", cursive;
+  border-bottom: #212121 solid;
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+
+  height: 95vh;
+  padding: 50px;
+  border-bottom: #212121 solid;
+}
+
+/*
+ * BAGIAN KIRI HERO-PAGE
+ */
+#hero .left-hero {
+  /* width: 100%; */
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#hero .left-hero h1 {
+  font-size: 50px;
+}
+
+#hero .left-hero p {
+  margin: 10px 0;
+}
+
+#hero .left-hero .nav-btn {
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+#hero .left-hero .nav-btn a {
+  background: #3ec1d3;
+  color: #212121;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  margin-right: 15px;
+  padding: 10px;
+
+  border: 2px #212121 solid;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 0px 0px #2e2e2e;
+}
+#hero .left-hero .nav-btn a:hover {
+  box-shadow: 6px 6px 0px 0px #2e2e2e;
+}
+
+/*
+ * BAGIAN KANAN HERO-PAGE
+ */
+#hero .right-hero img {
+  width: 600px;
+  background: tomato;
+  border-radius: 10px;
+  border: 4px #212121 solid;
+  box-shadow: 15px 15px 0px 0px #2e2e2e;
+  transition: all 0.3s ease;
+}
+
+#hero .right-hero img:hover {
+  transform: translate(9px, 9px);
+  box-shadow: 6px 6px 0px 0px #2e2e2e;
+}
+
+/*
+ * BAGIAN PROJECT
+ */
+#projects {
+  padding: 30px 50px;
+  background: #46cdcf;
+}
+#projects h2 {
+  width: 20%;
+  padding: 10px;
+  margin: 0 auto;
+
+  text-align: center;
+  background: #f9ed69;
+  border: #2e2e2e solid;
+  box-shadow: 8px 8px 0px 0px #2e2e2e;
+
+  transition: all 0.1s ease;
+}
+#projects h2:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 5px 5px 0px 0px #2e2e2e;
+}
+
+/*
+ * BAGIAN LIST PROJECT
+ */
+#projects .list-project {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  padding: 10px;
+  margin: 30px 0;
+}
+
+/*
+ * BAGIAN CARD 
+ */
+.list-project .card {
+  margin: 20px 0;
+  background: #eee;
+
+  border-radius: 8px;
+  border: #212121 solid;
+  box-shadow: 12px 12px 0px 0px #383838;
+
+  transition: all 0.2s ease;
+}
+.list-project .card:hover {
+  transform: translate(5px, 5px);
+  box-shadow: 7px 7px 0px 0px #2e2e2e;
+}
+
+.card .card-header {
+  margin: 5px 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.card .card-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card .card-footer {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.card .card-footer a {
+  padding: 10px;
+  color: #212121;
+  background: #f67280;
+
+  font-weight: 600;
+  text-decoration: none;
+
+  border-radius: 5px;
+  border: 2px #2e2e2e solid;
+
+  transition: all 0.3s ease;
+}
+.card .card-footer a:hover {
+  background: #eb5766;
+}
+
+/*
+ * BAGIAN FOOTER 
+ */
+footer {
+  height: 10vh;
+  padding: 10px;
+  font-size: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer img {
+  margin: 0 8px;
+}
