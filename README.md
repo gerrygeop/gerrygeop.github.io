@@ -9,4 +9,6 @@ const role = "Front-End";
 - Basic?
 - Curly Robot?
 
-https://gerrygeop.github.io
+Clik > <a href="https://gerrygeop.github.io" target="_blank" rel="noreferrer noopener">Portfolio</a
+
+\*Aseekk
