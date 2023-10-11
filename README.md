@@ -1,9 +1,3 @@
-### Not Today
-
-```js
-const role = "Front-End";
-```
-
 - Portfolio?
 - Sample Project?
 - Basic?
