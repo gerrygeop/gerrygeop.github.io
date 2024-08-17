@@ -1,192 +1,216 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body {
-  font-family: "Roboto Mono", monospace;
-  color: #212121;
+	color: #212121;
 }
 
-header {
-  padding: 15px 10px;
-  text-align: center;
-  background: #f9ed69;
-  font-family: "Sofia", cursive;
-  border-bottom: #212121 solid;
+button {
+	border: none;
+	outline: none;
+	background-color: transparent;
 }
+
+a {
+	text-decoration: none;
+}
+
+/* text-7xl */
+h1 {
+	font-size: 6rem;
+	line-height: 1;
+}
+
+/* text-5xl */
+h2 {
+	font-size: 3rem; /* 48px */
+	line-height: 1;
+}
+
+/* FONTS */
+.font-sans {
+	font-family: "DM Sans", sans-serif;
+}
+.font-mono {
+	font-family: "Roboto Mono", monospace;
+}
+.font-serif {
+	font-family: "Sofia", cursive;
+}
+/* END FONTS */
+
+.container {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+/* header {
+	padding: 15px 10px;
+	text-align: center;
+	background: #f9ed69;
+	border-bottom: #212121 solid;
+} */
 
 #hero {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: space-between;
-
-  height: 95vh;
-  padding: 50px;
-  border-bottom: #212121 solid;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: space-between;
+	height: 95vh;
+	padding: 50px;
 }
 
 /*
  * BAGIAN KIRI HERO-PAGE
  */
 #hero .left-hero {
-  /* width: 100%; */
-  height: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-#hero .left-hero h1 {
-  font-size: 50px;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 }
 
 #hero .left-hero p {
-  margin: 10px 0;
+	margin: 10px 0;
+	font-size: 1.25rem;
+	line-height: 1.75rem;
 }
 
 #hero .left-hero .nav-btn {
-  padding: 20px 0;
-  margin-top: 50px;
+	padding: 20px 0;
+	/* margin-top: 10px; */
 }
 
-#hero .left-hero .nav-btn a {
-  background: #3ec1d3;
-  color: #212121;
-
-  text-decoration: none;
-  font-weight: 600;
-
-  margin-right: 15px;
-  padding: 10px;
-
-  border: 2px #212121 solid;
-  border-radius: 5px;
-  transition: all 0.3s ease;
-  box-shadow: 2px 2px 0px 0px #2e2e2e;
+#hero .left-hero .nav-btn a button {
+	background: #3ec1d3;
+	color: #212121;
+	letter-spacing: 0.025em;
+	text-decoration: none;
+	font-weight: 600;
+	margin-right: 15px;
+	padding: 10px;
+	border: 2px #212121 solid;
+	transition: all 0.3s ease;
+	box-shadow: 2px 2px 0px 0px #2e2e2e;
 }
-#hero .left-hero .nav-btn a:hover {
-  box-shadow: 6px 6px 0px 0px #2e2e2e;
+
+#hero .left-hero .nav-btn a button:hover {
+	transform: translate(-4px, -4px);
+	box-shadow: 6px 6px 0px 0px #2e2e2e;
 }
 
 /*
  * BAGIAN KANAN HERO-PAGE
  */
 #hero .right-hero img {
-  width: 600px;
-  background: tomato;
-  border-radius: 10px;
-  border: 4px #212121 solid;
-  box-shadow: 15px 15px 0px 0px #2e2e2e;
-  transition: all 0.3s ease;
-}
+	width: 400px;
+	height: 400px;
+	background: tomato;
 
-#hero .right-hero img:hover {
-  transform: translate(9px, 9px);
-  box-shadow: 6px 6px 0px 0px #2e2e2e;
+	border-radius: 50%;
+	border: 4px #212121 solid;
+
+	box-shadow: 8px 0px 0px 0px #2b2a2a;
+	transition: all 0.3s ease;
 }
 
 /*
  * BAGIAN PROJECT
  */
 #projects {
-  padding: 30px 50px;
-  background: #46cdcf;
+	padding: 30px 50px;
+	border: #212121 solid;
 }
+
 #projects h2 {
-  width: 20%;
-  padding: 10px;
-  margin: 0 auto;
-
-  text-align: center;
-  background: #f9ed69;
-  border: #2e2e2e solid;
-  box-shadow: 8px 8px 0px 0px #2e2e2e;
-
-  transition: all 0.1s ease;
-}
-#projects h2:hover {
-  transform: translate(3px, 3px);
-  box-shadow: 5px 5px 0px 0px #2e2e2e;
+	width: 500px;
+	font-size: 2rem;
+	border-bottom: #2e2e2e solid;
+	transition: all 0.1s ease;
 }
 
 /*
  * BAGIAN LIST PROJECT
  */
 #projects .list-project {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-  padding: 10px;
-  margin: 30px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 10px 0;
+	margin: 30px 0;
 }
 
 /*
  * BAGIAN CARD 
  */
 .list-project .card {
-  margin: 20px 0;
-  background: #eee;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
-  border-radius: 8px;
-  border: #212121 solid;
-  box-shadow: 12px 12px 0px 0px #383838;
-
-  transition: all 0.2s ease;
+	margin: 20px 0;
+	background: #eee;
+	border: #212121 solid;
+	box-shadow: 6px 6px 0px 0px #383838;
+	transition: all 0.2s ease;
 }
+
 .list-project .card:hover {
-  transform: translate(5px, 5px);
-  box-shadow: 7px 7px 0px 0px #2e2e2e;
+	transform: translate(-6px, -6px);
+	box-shadow: 12px 12px 0px 0px #4e4e4e;
 }
 
 .card .card-header {
-  margin: 5px 0;
-  padding: 10px;
-  text-align: center;
+	padding: 20px 10px;
+	text-align: center;
 }
 
 .card .card-header h3 {
-  font-size: 16px;
-  font-weight: 600;
+	font-size: 1.5rem;
+	/* text-decoration: underline; */
+	font-weight: 400;
 }
 
-.card .card-footer {
-  margin: 10px 0;
-  padding: 10px;
+.card img {
+	padding: 0;
+	margin: 0;
+}
+
+/* .card .card-footer {
+	margin: 10px 0;
+	padding: 10px;
 }
 
 .card .card-footer a {
-  padding: 10px;
-  color: #212121;
-  background: #f67280;
-
-  font-weight: 600;
-  text-decoration: none;
-
-  border-radius: 5px;
-  border: 2px #2e2e2e solid;
-
-  transition: all 0.3s ease;
+	padding: 2px 10px;
+	color: #212121;
+	font-weight: 600;
+	font-size: large;
+	text-decoration: none;
+	border: 2px #2e2e2e solid;
+	transition: all 0.3s ease;
 }
+
 .card .card-footer a:hover {
-  background: #eb5766;
-}
+	background: #eb5766;
+} */
 
 /*
  * BAGIAN FOOTER 
  */
 footer {
-  height: 10vh;
-  padding: 10px;
-  font-size: 14px;
+	height: 10vh;
+	padding: 10px;
+	font-size: 14px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-footer img {
-  margin: 0 8px;
+footer span {
+	margin: 0 6px;
+	font-size: 1.2rem;
 }
