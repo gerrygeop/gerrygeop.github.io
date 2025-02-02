@@ -19,19 +19,21 @@ function error(error) {
 
 function showCardItem(data) {
 	let listProject = "";
-	// data.images.reverse().forEach((image) => {
 
 	const idsToShow = [18, 19, 20, 21, 22, 23]; // ID yang ingin ditampilkan
 	const filteredData = data.images.filter((image) => idsToShow.includes(image.id));
+
 	filteredData.reverse().forEach((image) => {
 		listProject += `
-            <div class="card">
-                <div class="card-header">
-                    <h3>${image.name}</h3>
+            <a href="detail.html?id=${image.id}" class="hover:shadow-md hover:shadow-accent rounded-xl p-4">
+                <div class="relative overflow-hidden rounded-xl w-full h-[250px]">
+                    <img src="${image.pictureId}" alt="${image.name}" class="w-full h-full object-cover object-center rounded-xl transition-transform duration-300 transform ease-brand hover:scale-110">
                 </div>
-    
-                <img src="${image.pictureId}" alt="${image.name}" width="500">
-            </div>
+
+                <div class="mt-2 py-2">
+                    <h3 class="font-mono text-soft-accent tracking-wide text-lg">${image.name}</h3>
+                </div>
+            </a>
         `;
 	});
 

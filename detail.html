@@ -31,52 +31,46 @@
 		</style>
 
 		<title>Gerry</title>
+		<script>
+			const BASE_URL = "https://gerrygeop.github.io/images-base/data.json";
+
+			function getQueryParam(param) {
+				const urlParams = new URLSearchParams(window.location.search);
+				return urlParams.get(param);
+			}
+
+			function showProjectDetail(data) {
+				const projectId = parseInt(getQueryParam("id")); // Ambil ID dari URL
+				const project = data.images.find((image) => image.id === projectId);
+
+				if (project) {
+					document.getElementById("project-image").src = project.pictureId;
+					document.getElementById("project-title").textContent = project.name;
+					document.getElementById("project-description").textContent =
+						project.description ||
+						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto deleniti veniam quos atque placeat, praesentium labore at, sed impedit sequi assumenda, id error quisquam? Perferendis libero tempora alias iste? Aliquam.";
+				} else {
+					document.getElementById("project-content").innerHTML = "<p>Project not found!</p>";
+				}
+			}
+
+			fetch(BASE_URL)
+				.then((response) => response.json())
+				.then((data) => showProjectDetail(data))
+				.catch((error) => console.error("Error fetching data:", error));
+		</script>
 	</head>
 	<body class="font-sans text-accent bg-primary">
 		<div class="max-w-7xl mx-auto px-4">
 			<header class="h-20 flex items-center">
-				<h2 id="logo" class="font-display text-xl font-semibold uppercase">Gerry</h2>
+				<a href="index.html" id="logo" class="font-mono text-xl font-semibold uppercase">Gerry</a>
 			</header>
 
-			<main>
-				<section id="hero" class="py-28 sm:py-38">
-					<div>
-						<div class="flex flex-col gap-y-14 font-display">
-							<h2 class="text-8xl font-semibold">
-								Hi 👋, <br />
-								I'm <span class="underline text-soft-accent">Gerry.</span>
-							</h2>
-
-							<p class="text-xl">
-								I'm a web developer <br />
-								passionate about building accessible web apps <br />
-								that users love.
-							</p>
-
-							<a
-								href="https://www.github.com/gerrygeop"
-								class="text-primary font-mono font-2xl font-semibold tracking-wider uppercase rounded-lg bg-accent hover:bg-soft-accent transition-color duration-200 w-fit px-4 py-2"
-								target="_blank"
-								rel="noreferrer noopener"
-							>
-								Contact me
-							</a>
-						</div>
-					</div>
-
-					<!-- <div class="right-hero">
-						<img src="./icons/wearing_a_mask.svg" alt="Illustration" />
-					</div> -->
-				</section>
-
-				<div class="border-t"></div>
-
-				<section id="projects" class="py-28 sm:py-38">
-					<h2 class="text-7xl font-display font-bold mb-14">Projects</h2>
-
-					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="list-project"></div>
-				</section>
-			</main>
+			<section id="project-content" class="py-20">
+				<img id="project-image" src="" alt="Project Image" class="rounded-2xl mb-8" />
+				<h1 id="project-title" class="text-4xl font-display font-bold mb-6"></h1>
+				<p id="project-description"></p>
+			</section>
 
 			<footer class="pb-20 pt-10 border-t grid grid-cols-2">
 				<h1 class="text-4xl font-display font-bold uppercase">Gerry</h1>
@@ -89,7 +83,5 @@
 				</div>
 			</footer>
 		</div>
-
-		<script src="./src/js/script.js"></script>
 	</body>
 </html>
