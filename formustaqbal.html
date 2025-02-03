@@ -31,6 +31,34 @@
 		</style>
 
 		<title>Gerry</title>
+		<script>
+			const BASE_URL = "https://gerrygeop.github.io/images-base/data.json";
+
+			function getQueryParam(param) {
+				const urlParams = new URLSearchParams(window.location.search);
+				return urlParams.get(param);
+			}
+
+			function showProjectDetail(data) {
+				const projectId = parseInt(getQueryParam("id")); // Ambil ID dari URL
+				const project = data.images.find((image) => image.id === projectId);
+
+				if (project) {
+					document.getElementById("project-image").src = project.pictureId;
+					document.getElementById("project-title").textContent = project.name;
+					document.getElementById("project-description").textContent =
+						project.description ||
+						"Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto deleniti veniam quos atque placeat, praesentium labore at, sed impedit sequi assumenda, id error quisquam? Perferendis libero tempora alias iste? Aliquam.";
+				} else {
+					document.getElementById("project-content").innerHTML = "<p>Project not found!</p>";
+				}
+			}
+
+			fetch(BASE_URL)
+				.then((response) => response.json())
+				.then((data) => showProjectDetail(data))
+				.catch((error) => console.error("Error fetching data:", error));
+		</script>
 	</head>
 	<body class="font-sans text-accent bg-primary">
 		<div class="max-w-7xl mx-auto px-4">
@@ -91,88 +119,41 @@
 				</ul>
 			</header>
 
-			<main class="mb-20">
-				<!-- Hero page -->
-				<section class="py-28 sm:py-38">
-					<div>
-						<div class="flex flex-col gap-y-14 font-display">
-							<h2 class="text-8xl font-semibold">
-								Hi 👋, <br />
-								I'm <span class="underline text-soft-accent">Gerry.</span>
-							</h2>
+			<section class="py-20 mb-20 max-w-4xl mx-auto">
+				<img src="https://i.ibb.co.com/8LSCHtNH/formustaqbal.png" alt="Formustaqbal" class="rounded-2xl mb-10" />
+				<h1 class="text-4xl font-display font-bold mb-6">Formustaqbal</h1>
 
-							<p class="text-xl tracking-wide">
-								I'm a web developer <br />
-								passionate about building accessible web apps <br />
-								that users love.
-							</p>
+				<article class="font-display tracking-wider col-span-2">
+					<p class="text-soft-accent">
+						Formustaqbal adalah platform pembelajaran online yang dikembangkan untuk Universitas Islam Negeri Sultan Aji Muhammad Idris (UINSI). Proyek ini bertujuan untuk
+						menyediakan sistem pembelajaran tambahan bagi mahasiswa dalam mata pelajaran Bahasa Arab dan Bahasa Inggris.
+					</p>
 
-							<a
-								href="https://www.github.com/gerrygeop"
-								class="text-primary font-mono font-2xl font-semibold tracking-wider uppercase rounded-lg bg-accent hover:bg-soft-accent transition-color duration-200 w-fit px-4 py-2"
-								target="_blank"
-								rel="noreferrer noopener"
-							>
-								Contact me
-							</a>
-						</div>
-					</div>
+					<h4 class="text-lg font-semibold mt-6 mb-1">Fitur Utama:</h4>
+					<ol class="list-decimal list-inside text-soft-accent">
+						<li>
+							<b>Tes Penentuan Level:</b> Mahasiswa mengikuti tes awal untuk menentukan level belajar mereka, dengan tiga kategori kelas berdasarkan rentang nilai 0-100. Level ini
+							akan tetap hingga akhir semester.
+						</li>
+						<li><b>Modul & Submodul:</b> Setiap mata pelajaran memiliki struktur pembelajaran yang terdiri dari modul, submodul, dan materi pembelajaran interaktif.</li>
+						<li><b>Pembelajaran Hybrid:</b> Dosen atau pemateri dapat menambahkan video, audio, atau gambar ke dalam materi maupun tes untuk meningkatkan pengalaman belajar.</li>
+						<li><b>Tes dan Evaluasi Berkelanjutan:</b> Setiap akhir materi terdapat tes singkat untuk menguji pemahaman mahasiswa sebelum melanjutkan ke materi berikutnya.</li>
+						<li>
+							<b>Fitur Ranking Publik:</b> Fitur Ranking Publik: Setiap level memiliki sistem peringkat yang dapat diakses oleh mahasiswa, mendorong kompetisi akademik yang sehat.
+						</li>
+						<li>
+							<b>Ujian Akhir Semester & Integrasi SIAKAD:</b> Hasil pembelajaran direkap oleh sistem dan dapat diakses oleh dosen untuk penilaian akhir yang akan dimasukkan ke
+							dalam sistem akademik kampus.
+						</li>
+					</ol>
 
-					<!-- <div class="right-hero">
-						<img src="./icons/wearing_a_mask.svg" alt="Illustration" />
-					</div> -->
-				</section>
-
-				<div class="border-t"></div>
-
-				<section class="py-28 sm:py-38">
-					<h2 class="text-7xl font-display font-bold mb-14">Projects</h2>
-
-					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-						<a href="pemira-bem-unmul.html" class="hover:text-accent group">
-							<div class="relative overflow-hidden rounded-xl w-full h-[250px]">
-								<img
-									src="https://i.ibb.co.com/Zz3qmvfD/pemirabem-unmul.png"
-									alt="PEMIRA BEM-KM UNMUL"
-									class="w-full h-full object-cover object-center rounded-xl transition-transform duration-300 transform ease-brand group-hover:scale-110"
-								/>
-							</div>
-
-							<div class="mt-2 py-2">
-								<h3 class="font-mono text-soft-gray group-hover:text-accent transition-color duration-200 tracking-wide text-lg">PEMIRA BEM-KM UNMUL</h3>
-							</div>
-						</a>
-
-						<a href="formustaqbal.html" class="hover:text-accent group">
-							<div class="relative overflow-hidden rounded-xl w-full h-[250px]">
-								<img
-									src="https://i.ibb.co.com/8LSCHtNH/formustaqbal.png"
-									alt="Formustaqbal"
-									class="w-full h-full object-cover object-center rounded-xl transition-transform duration-300 transform ease-brand group-hover:scale-110"
-								/>
-							</div>
-
-							<div class="mt-2 py-2">
-								<h3 class="font-mono text-soft-gray group-hover:text-accent transition-color duration-200 tracking-wide text-lg">Formustaqbal</h3>
-							</div>
-						</a>
-
-						<a href="#" class="hover:text-accent group">
-							<div class="relative overflow-hidden rounded-xl w-full h-[250px]">
-								<img
-									src="https://i.ibb.co.com/v6DNrJXK/vandertech.png"
-									alt="Vandertech"
-									class="w-full h-full object-cover object-center rounded-xl transition-transform duration-300 transform ease-brand group-hover:scale-110"
-								/>
-							</div>
-
-							<div class="mt-2 py-2">
-								<h3 class="font-mono text-soft-gray group-hover:text-accent transition-color duration-200 tracking-wide text-lg">Vandertech</h3>
-							</div>
-						</a>
-					</div>
-				</section>
-			</main>
+					<h4 class="text-lg font-semibold mt-6 mb-1">Teknologi:</h4>
+					<p class="text-soft-accent">
+						Aplikasi ini dibangun dengan pendekatan LMS (Learning Management System) yang komprehensif, menggunakan Laravel untuk backend dan React untuk frontend guna memastikan
+						pengalaman pengguna yang interaktif dan responsif. Sistem juga mendukung pengelolaan materi yang mudah bagi pemateri, meskipun kompleks dalam pengembangannya.
+					</p>
+				</article>
+			</section>
 
 			<footer class="pb-20 pt-10 border-t grid grid-cols-1 md:grid-cols-2 gap-8">
 				<!-- Contact -->
