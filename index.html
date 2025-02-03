@@ -35,11 +35,11 @@
 	<body class="font-sans text-accent bg-primary">
 		<div class="max-w-7xl mx-auto px-4">
 			<header class="h-20 flex items-center">
-				<h2 id="logo" class="font-display text-xl font-semibold uppercase">Gerry</h2>
+				<h2 class="font-display text-xl font-semibold uppercase">Gerry</h2>
 			</header>
 
 			<main>
-				<section id="hero" class="py-28 sm:py-38">
+				<section class="py-28 sm:py-38">
 					<div>
 						<div class="flex flex-col gap-y-14 font-display">
 							<h2 class="text-8xl font-semibold">
@@ -71,10 +71,24 @@
 
 				<div class="border-t"></div>
 
-				<section id="projects" class="py-28 sm:py-38">
+				<section class="py-28 sm:py-38">
 					<h2 class="text-7xl font-display font-bold mb-14">Projects</h2>
 
-					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="list-project"></div>
+					<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+						<a href="#" class="hover:shadow-md hover:shadow-accent rounded-xl p-4">
+							<div class="relative overflow-hidden rounded-xl w-full h-[250px]">
+								<img
+									src="https://i.ibb.co.com/Zz3qmvfD/pemirabem-unmul.png"
+									alt="PEMIRA BEM-KM UNMUL"
+									class="w-full h-full object-cover object-center rounded-xl transition-transform duration-300 transform ease-brand hover:scale-110"
+								/>
+							</div>
+
+							<div class="mt-2 py-2">
+								<h3 class="font-mono text-soft-accent tracking-wide text-lg">PEMIRA BEM-KM UNMUL</h3>
+							</div>
+						</a>
+					</div>
 				</section>
 			</main>
 
@@ -89,7 +103,5 @@
 				</div>
 			</footer>
 		</div>
-
-		<script src="./src/js/script.js"></script>
 	</body>
 </html>
