@@ -1,1 +1,6 @@
+@import url(https://fonts.bunny.net/css?family=inter:400);
 @import "tailwindcss";
+
+@theme {
+	--font-sans: "Inter", "sans-serif";
+}
