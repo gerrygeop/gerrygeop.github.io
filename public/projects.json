@@ -1,0 +1,93 @@
+[
+	{
+		"id": 1,
+		"title": "PEMIRA BEM KM UNMUL",
+		"image": "/assets/welcome-pemira-unmul.png",
+		"description": "Web e-voting untuk BEM UNMUL",
+		"story": "Website pemilihan raya online untuk BEM-KM Universitas Mulawarman, termasuk sebelumnya digunakan oleh BEM FISIP dan BEM Faperta. Aplikasi ini dirancang untuk mengakomodasi ribuan mahasiswa (lebih dari 5.000 user) dalam proses pemungutan suara yang aman dan efisien.",
+		"tech": ["Laravel", "MySQL", "Tailwind CSS", "Inertia", "React"],
+		"link": "https://pemira.km.unmul.ac.id/",
+		"github": "https://github.com/gerrygeop/pemira-app",
+		"slug": "pemira-bem-km-unmul",
+		"fitur": [
+			{
+				"nama": "Autentikasi OTP",
+				"deskripsi": "Menggunakan email SIAKAD aktif dengan berbagai filter validasi seperti status keaktifan dan fakultas."
+			},
+			{
+				"nama": "Manajemen Kandidat & Pemilih",
+				"deskripsi": "Termasuk pengelolaan data, foto, dan profil calon serta pemilih."
+			},
+			{
+				"nama": "Live Statistik Partisipasi",
+				"deskripsi": "Menampilkan bar chart anonim untuk memantau partisipasi secara langsung."
+			},
+			{
+				"nama": "Race Chart Rekapitulasi Suara",
+				"deskripsi": "Menyajikan rekapitulasi suara yang aktif setelah proses pemungutan suara ditutup."
+			}
+		]
+	},
+	{
+		"id": 2,
+		"title": "Formustaqbal",
+		"image": "/assets/formustaqbal.jpg",
+		"description": "LMS & E-learning interaktif untuk UINSI Samarinda",
+		"story": "Platform belajar daring untuk mahasiswa UINSI Samarinda yang dirancang agar fleksibel dan interaktif. Didesain agar proses belajar dapat dilakukan dari mana saja dengan materi yang dapat disesuaikan berdasarkan level mahasiswa.",
+		"tech": ["Laravel", "MySQL", "Tailwind CSS", "Inertia", "React"],
+		"link": "-",
+		"github": "https://github.com/gerrygeop/formustaqbal",
+		"slug": "formustaqbal",
+		"fitur": [
+			{
+				"nama": "Tes Penempatan Level Awal",
+				"deskripsi": "Berdasarkan nilai, digunakan untuk menentukan kelas yang sesuai."
+			},
+			{
+				"nama": "Modul Belajar Interaktif",
+				"deskripsi": "Menggunakan kombinasi teks, audio, dan video untuk pengalaman belajar yang menarik."
+			},
+			{
+				"nama": "Kuis Interaktif",
+				"deskripsi": "Dilengkapi dengan media pendukung seperti gambar dan audio untuk memperkaya pemahaman."
+			},
+			{
+				"nama": "Sistem Ranking",
+				"deskripsi": "Menampilkan peringkat siswa di setiap kelas dan secara keseluruhan."
+			},
+			{
+				"nama": "Poin Perkembangan",
+				"deskripsi": "Berfungsi sebagai motivasi belajar dan sebagai dasar evaluasi akhir siswa."
+			}
+		]
+	},
+	{
+		"id": 3,
+		"title": "Vandertech",
+		"image": "/assets/preview-vandertech.jpg",
+		"description": "Company profil perusahaan",
+		"story": "Website company profile untuk PT. Vandertech, sebuah perusahaan tambang batu bara. Website ini berfungsi sebagai media branding perusahaan dan informasi dasar bagi mitra serta calon investor.",
+		"tech": ["Laravel", "MySQL", "Tailwind CSS"],
+		"link": "-",
+		"github": "https://github.com/gerrygeop/vandertech",
+		"slug": "vandertech",
+		"fitur": [
+			{
+				"nama": "Halaman Profil Perusahaan",
+				"deskripsi": "Menampilkan informasi mengenai visi, misi, dan sejarah perusahaan."
+			},
+			{
+				"nama": "Halaman Proyek Tambang",
+				"deskripsi": "Menampilkan daftar proyek tambang yang sedang berjalan maupun yang telah diselesaikan."
+			},
+			{
+				"nama": "Halaman Kontak & Form Integrasi",
+				"deskripsi": "Memfasilitasi komunikasi dengan klien atau pihak yang berminat melalui form yang terintegrasi."
+			},
+			{
+				"nama": "Desain Simpel & Responsif",
+				"deskripsi": "Tampilan website yang simpel dan dapat menyesuaikan diri dengan berbagai ukuran layar sesuai preferensi klien."
+			}
+		]
+	}
+]

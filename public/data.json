@@ -1,0 +1,82 @@
+[
+	{
+		"id": 1,
+		"title": "PEMIRA BEM KM UNMUL",
+		"image": "/assets/welcome-pemira-unmul.png",
+		"description": "Web e-voting untuk BEM UNMUL",
+		"tech": ["Laravel", "MySQL", "Tailwind CSS", "Inertia", "React"],
+		"github": "https://github.com/gerrygeop/pemira-app"
+	},
+	{
+		"id": 2,
+		"title": "Formustaqbal",
+		"image": "/assets/formustaqbal.jpg",
+		"description": "LMS & E-learning interaktif untuk UINSI Samarinda",
+		"tech": ["Laravel", "MySQL", "Tailwind CSS", "Inertia", "React"],
+		"github": "https://github.com/gerrygeop/formustaqbal"
+	},
+	{
+		"id": 3,
+		"title": "Vandertech",
+		"image": "/assets/preview-vandertech.jpg",
+		"description": "Company profil perusahaan",
+		"tech": ["Laravel", "MySQL", "Tailwind CSS"],
+		"github": "https://github.com/gerrygeop/vandertech"
+	},
+	{
+		"id": 4,
+		"title": "PEMIRA FISIP UNMUL",
+		"description": "Aplikasi pemilihan online untuk fakultas FISIP UNMUL.",
+		"tech": ["Laravel", "MySQL", "Tailwind CSS"],
+		"github": "https://github.com/gerrygeop/app-voting"
+	},
+	{
+		"id": 5,
+		"title": "PEMIRA FAPERTA UNMUL",
+		"description": "Aplikasi pemilihan online untuk fakultas FAPERTA UNMUL.",
+		"tech": ["Laravel", "MySQL", "Tailwind CSS"],
+		"github": "https://github.com/gerrygeop/app-vote-faperta"
+	},
+	{
+		"id": 6,
+		"title": "Sistem Informasi Inventori",
+		"description": "Sistem informasi manajemen inventori merchandise.",
+		"tech": ["Laravel", "MySQL", "Tailwind CSS", "Filament"],
+		"github": "https://github.com/gerrygeop/inventori-merchandise"
+	},
+	{
+		"id": 7,
+		"title": "Desa Bukit Pariaman",
+		"description": "Profil Desa Bukit Pariaman & Layanan pengaduan.",
+		"tech": ["Laravel", "MySQL", "Tailwind CSS", "Inertia", "React"],
+		"github": "https://github.com/gerrygeop/desa-bukit-pariaman"
+	},
+	{
+		"id": 8,
+		"title": "SPK penilain kinerja guru terbaik",
+		"description": "Sistem pendukung keputusan penilain kinerja guru terbaik - Metode TOPSIS.",
+		"tech": ["Laravel", "MySQL", "Tailwind CSS", "Inertia", "React"],
+		"github": "https://github.com/gerrygeop/spk-guru-terbaik"
+	},
+	{
+		"id": 9,
+		"title": "SPK pemilihan Wedding Organizer",
+		"description": "Sistem pendukung keputusan pemilihan wedding organizer - Metode TOPSIS.",
+		"tech": ["Laravel", "MySQL", "Tailwind CSS", "Inertia", "React"],
+		"github": "https://github.com/gerrygeop/spk-wedding-organizer"
+	},
+	{
+		"id": 10,
+		"title": "Booking flight tickets",
+		"description": "Sistem informasi & manajemen pembelian tiket pesawat.",
+		"tech": ["Laravel", "MySQL", "Tailwind CSS", "Filament", "Livewire"],
+		"github": "https://github.com/gerrygeop/booking-flight-tickets"
+	},
+	{
+		"id": 11,
+		"title": "Aplikasi Absensi Pekerja",
+		"description": "Sistem manajemen absensi pekerja harian.",
+		"tech": ["Laravel", "MySQL", "Tailwind CSS", "Alpine JS", "Livewire"],
+		"github": "https://github.com/gerrygeop/app-absensi-pekerja"
+	}
+]
